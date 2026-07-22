@@ -1,0 +1,107 @@
+<div class="main-wrapper">
+    <app-menu></app-menu>
+<div class="page-wrapper">
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h4 class="page-title">Add Appointment</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <form [formGroup]="appointmentform">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Appointment ID</label>
+                                <input formControlName="id" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Patient Name</label>
+                                <input formControlName="patientName" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input formControlName="department" class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Vet</label>
+                                <input formControlName="vet" class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="date" formControlName="date" class="form-control datetimepicker">
+                                <!-- <div class="cal-icon">
+                                    <input formControlName="date" class="form-control datetimepicker">
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Time</label>
+                                <input type="time" formControlName="time" class="form-control" id="datetimepicker3">
+                                <!-- <div class="time-icon">
+                                    <input formControlName="time" class="form-control" id="datetimepicker3">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Patient Email</label>
+                                <input type="email" formControlName="patientEmail" class="form-control" type="email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Patient Phone Number</label>
+                                <input formControlName="patientPhonenumber" class="form-control" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" formControlName="address" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea formControlName="Message" cols="30" rows="4" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="display-block">Appointment Status</label>
+                        <div class="form-check form-check-inline">
+                            <input formControlName="status" class="form-check-input" type="radio" name="status" id="product_active" value="Active" checked>
+                            <label class="form-check-label" for="product_active">
+                            Active
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" formControlName="status"  type="radio" name="status" id="product_inactive" value="Inactive">
+                            <label class="form-check-label"  for="product_inactive">
+                            Inactive
+                            </label>
+                        </div>
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button (click)="editdata()" class="btn btn-primary submit-btn">Update Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+   
+    </div>
+</div>
